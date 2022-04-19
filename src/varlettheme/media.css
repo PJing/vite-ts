@@ -1,0 +1,26 @@
+@media screen and (min-width: 1220px) {
+  #app {
+    width: 1220px;
+    margin: 0 auto;
+  }
+  .bot-menu {
+    display: none;
+  }
+  .fixed-menu {
+    display: block;
+  }
+  .media-check{
+    display: none;
+  }
+}
+@media screen and (max-width: 1219px) {
+  .bot-menu {
+    display: flex;
+  }
+  .fixed-menu {
+    display: none;
+  }
+  .media-check{
+    display: flex;
+  }
+}

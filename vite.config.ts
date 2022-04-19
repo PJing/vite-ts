@@ -2,22 +2,23 @@
  * @Author: 彭璟
  * @Date: 2022-03-15 15:07:12
  * @LastEditors: 彭璟
- * @LastEditTime: 2022-03-22 09:03:58
+ * @LastEditTime: 2022-04-19 10:50:42
  * @Description: File description
  */
 import { defineConfig } from 'vite'
 import vue from '@vitejs/plugin-vue'
 import eslintPlugin from 'vite-plugin-eslint'
-import styleImport, { VantResolve } from 'vite-plugin-style-import'
 import { resolve } from 'path'
+import components from 'unplugin-vue-components/vite'
+import { VarletUIResolver } from 'unplugin-vue-components/resolvers'
 
 // https://vitejs.dev/config/
 export default defineConfig({
   plugins: [
     vue(),
     eslintPlugin(),
-    styleImport({
-      resolves: [VantResolve()]
+    components({
+      resolvers: [VarletUIResolver()]
     })
   ],
   resolve: {

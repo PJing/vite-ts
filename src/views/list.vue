@@ -2,20 +2,21 @@
  * @Author: 彭璟
  * @Date: 2022-03-17 17:27:29
  * @LastEditors: 彭璟
- * @LastEditTime: 2022-03-21 11:09:45
+ * @LastEditTime: 2022-04-19 10:40:19
  * @Description: 列表
 -->
 <template>
   <div>
-    <van-nav-bar title="列表" left-arrow @click-left="$router.back()" />
-    <van-skeleton title avatar :row="row" />
+    {{ title }}
   </div>
 </template>
 <script setup lang="ts">
 import { ref } from 'vue'
 
-const row = ref(4)
-
-
+const title = ref('列表')
 </script>
-<style lang="less" scoped></style>
+<style lang="less" scoped>
+.s {
+  font-size: 60px;
+}
+</style>

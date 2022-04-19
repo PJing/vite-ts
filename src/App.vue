@@ -2,15 +2,27 @@
  * @Author: 彭璟
  * @Date: 2022-03-15 15:07:12
  * @LastEditors: 彭璟
- * @LastEditTime: 2022-04-11 20:15:29
- * @Description: 入口组件
+ * @LastEditTime: 2022-04-19 17:29:52
+ * @Description: File description
 -->
 <template>
+  <div class="fixed-menu">
+    <var-app-bar :title="`电气学院五育系统- ${route.meta.title}`">
+      <template #right>
+        <var-space>
+          <var-button round text-color="#476cf4" @click="$router.push('/user')"> <var-icon name="magnify" /> </var-button>
+          <var-button round text-color="#476cf4" @click="$router.push('/')"> <var-icon name="home" /> </var-button>
+          <var-button round text-color="#476cf4" @click="$router.push('/user')"> <var-icon name="account-circle" /> </var-button>
+        </var-space>
+      </template>
+    </var-app-bar>
+    <br />
+  </div>
   <router-view> </router-view>
-  <van-tabbar v-if="route.meta.showTab" v-model="active" route>
-    <van-tabbar-item icon="home-o" to="/">首页</van-tabbar-item>
-    <van-tabbar-item icon="friends-o" to="/user">我的</van-tabbar-item>
-  </van-tabbar>
+  <var-bottom-navigation v-if="route.meta.showTab" v-model:active="active" class="bot-menu" fixed safe-area>
+    <var-bottom-navigation-item label="首页" icon="home" @click="$router.push('/')" />
+    <var-bottom-navigation-item label="我的" icon="account-circle" @click="$router.push('/user')" />
+  </var-bottom-navigation>
 </template>
 <script setup lang="ts">
 import { ref } from 'vue'
@@ -29,4 +41,8 @@ console.log('query: ', query)
 
 console.log(import.meta.env)
 </script>
-<style lang="less" scoped></style>
+<style lang="less" scoped>
+.fixed-menu {
+  margin-top: -8px;
+}
+</style>

@@ -2,7 +2,7 @@
  * @Author: 彭璟
  * @Date: 2022-03-15 15:09:37
  * @LastEditors: 彭璟
- * @LastEditTime: 2022-04-12 16:50:00
+ * @LastEditTime: 2022-04-19 14:59:06
  * @Description: File description
  */
 module.exports = {
@@ -22,6 +22,9 @@ module.exports = {
     ecmaVersion: 'latest',
     parser: '@typescript-eslint/parser',
     sourceType: 'module'
+  },
+  globals: {
+    require: true
   },
   plugins: ['vue', '@typescript-eslint'],
   rules: {

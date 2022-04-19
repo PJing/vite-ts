@@ -2,18 +2,21 @@
  * @Author: 彭璟
  * @Date: 2022-03-17 17:27:29
  * @LastEditors: 彭璟
- * @LastEditTime: 2022-03-17 18:36:19
+ * @LastEditTime: 2022-04-19 10:40:30
  * @Description: 个人中心
 -->
 <template>
   <div>
-    <van-nav-bar title="个人中心" />
-    <van-skeleton title avatar :row="row" />
+    {{ title }}
   </div>
 </template>
 <script setup lang="ts">
 import { ref } from 'vue'
 
-const row = ref(4)
+const title = ref('个人中心')
 </script>
-<style lang="less" scoped></style>
+<style lang="less" scoped>
+.s {
+  font-size: 60px;
+}
+</style>

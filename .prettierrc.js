@@ -2,11 +2,11 @@
  * @Author: 彭璟
  * @Date: 2022-03-15 15:17:24
  * @LastEditors: 彭璟
- * @LastEditTime: 2022-03-16 11:42:54
+ * @LastEditTime: 2022-04-19 11:17:49
  * @Description: File description
  */
 module.exports = {
-  printWidth: 80,
+  printWidth: 180,
   //   tabWidth: 4,
   // useTabs: false,
   semi: false, // 未尾分号, default:  true
